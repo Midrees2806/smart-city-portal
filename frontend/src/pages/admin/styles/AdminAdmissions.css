@@ -1,0 +1,322 @@
+/* --- Root Variables for Branding --- */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #64748b;
+  --success-color: #22c55e;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 12px;
+}
+
+.admin-admission-container {
+  padding: 2rem;
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* --- Header Section --- */
+.admin-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.admin-header h2 {
+  color: #1e293b;
+  font-size: 1.875rem;
+  margin: 0;
+}
+
+.admin-header p {
+  color: var(--secondary-color);
+  margin-top: 0.5rem;
+}
+
+/* --- Professional Table Design --- */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.admin-table th {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.admin-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* --- Status Badges --- */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.pending { background: #fef3c7; color: #92400e; }
+.status-badge.verified { background: #dcfce7; color: #166534; }
+.status-badge.rejected { background: #fee2e2; color: #991b1b; }
+
+/* --- Buttons --- */
+.view-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+/* --- Modern Modal Overlay --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content.large-modal {
+  background: var(--white);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Modal Navigation Tabs --- */
+.modal-nav {
+  display: flex;
+  background: #f1f5f9;
+  padding: 0.5rem;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-nav button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.modal-nav button.active {
+  background: var(--white);
+  color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.close-x {
+  max-width: 40px;
+  font-size: 1.5rem;
+  color: var(--danger-color) !important;
+}
+
+/* --- Details Grid (Information Tab) --- */
+.modal-body { padding: 2rem; }
+
+.modal-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.detail-item p, .detail-item input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  margin: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.detail-item input:focus {
+  outline: 2px solid var(--primary-color);
+  background: white;
+}
+
+/* --- Document Gallery Tab --- */
+.docs-view { padding: 2rem; }
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.doc-card {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.doc-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #475569;
+}
+
+.doc-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  transition: transform 0.3s;
+  cursor: zoom-in;
+}
+
+.doc-card img:hover { transform: scale(1.05); }
+
+.signature-card img {
+  background: white;
+  object-fit: contain;
+}
+
+/* --- Update Files Section --- */
+.edit-files-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #e2e8f0;
+}
+
+.file-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.file-edit-grid input {
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+/* --- Action Bar --- */
+.verification-bar {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.v-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.v-btns button, .save-btn, .cancel-btn, .edit-btn-top {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.verify-btn { background: var(--success-color); color: white; }
+.reject-btn { background: var(--warning-color); color: white; }
+.delete-btn-final { background: var(--danger-color); color: white; }
+.save-btn { background: var(--success-color); color: white; }
+.cancel-btn { background: #cbd5e1; color: #1e293b; }
+.edit-btn-top { background: var(--primary-color); color: white; }
+
+button:hover { opacity: 0.9; }
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-input {
+  width: 70%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.search-count {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+
+# Python virtual environment
+venv/
+env/
+__pycache__/
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+
+# Build folders
+frontend/build/

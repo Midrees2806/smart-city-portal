@@ -1,0 +1,396 @@
+/* MyApplications.css - All classnames are prefixed with 'myapps-' to avoid conflicts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.myapps-main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.myapps-header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.myapps-header-section h1 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.myapps-header-icon {
+  font-size: 2.5rem;
+}
+
+.myapps-header-section p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Status Summary Cards */
+.myapps-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.myapps-stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.myapps-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.myapps-stat-total {
+  background: linear-gradient(135deg, #48bb78 0%, #2f855a 100%);
+  color: white;
+}
+
+.myapps-stat-pending {
+  background: #feebc8;
+  color: #dd6b20;
+}
+
+.myapps-stat-verified {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+.myapps-stat-rejected {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.myapps-stat-icon {
+  font-size: 2rem;
+}
+
+.myapps-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.myapps-stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.myapps-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Filter Tabs */
+.myapps-filter-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.myapps-filter-btn {
+  padding: 0.5rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.myapps-filter-btn:hover {
+  color: #48bb78;
+  background: #f7fafc;
+}
+
+.myapps-filter-active {
+  background: #48bb78;
+  color: white;
+}
+
+.myapps-filter-active:hover {
+  color: white;
+}
+
+/* Applications List */
+.myapps-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.myapps-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.myapps-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.myapps-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.myapps-card-icon {
+  width: 50px;
+  height: 50px;
+  background: #f7fafc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.myapps-card-title {
+  flex: 1;
+}
+
+.myapps-card-title h3 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin: 0 0 0.2rem 0;
+}
+
+.myapps-card-reference {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Status Badges */
+.myapps-status-badge {
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.myapps-pending {
+  background: #feebc8;
+  color: #dd6b20;
+}
+
+.myapps-verified {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+.myapps-rejected {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+/* Application Details */
+.myapps-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.myapps-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.myapps-detail-label {
+  color: #718096;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.myapps-detail-value {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* Parent Info */
+.myapps-parent-info {
+  background: #f8fafc;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #48bb78;
+}
+
+.myapps-parent-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-right: 0.5rem;
+}
+
+.myapps-parent-value {
+  color: #2d3748;
+}
+
+/* Footer */
+.myapps-card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.myapps-status-message {
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.myapps-msg-pending {
+  background: #fffbeb;
+  color: #dd6b20;
+}
+
+.myapps-msg-verified {
+  background: #f0fdf4;
+  color: #2f855a;
+}
+
+.myapps-msg-rejected {
+  background: #fef2f2;
+  color: #c53030;
+}
+
+/* No Applications State */
+.myapps-empty-state {
+  text-align: center;
+  padding: 4rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.myapps-empty-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.myapps-empty-state h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.myapps-empty-state p {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.myapps-action-btn {
+  background: linear-gradient(135deg, #48bb78 0%, #2f855a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.myapps-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(72, 187, 120, 0.3);
+}
+
+/* Loading State */
+.myapps-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.myapps-loading-spinner {
+  margin-bottom: 1rem;
+}
+
+.myapps-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #48bb78;
+  border-radius: 50%;
+  animation: myapps-spin 1s linear infinite;
+}
+
+@keyframes myapps-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.myapps-error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .myapps-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .myapps-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myapps-filter-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .myapps-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myapps-card-header {
+    flex-wrap: wrap;
+  }
+
+  .myapps-status-badge {
+    width: 100%;
+    text-align: center;
+  }
+}

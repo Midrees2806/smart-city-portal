@@ -1,0 +1,1125 @@
+/* Smart City Portal - AI Fee Reminder Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.smartcity-fee-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #2d3748;
+}
+
+/* Header Styles */
+.smartcity-fee-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.smartcity-fee-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.smartcity-fee-icon {
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+
+.smartcity-fee-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.smartcity-fee-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.institution-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Tabs */
+.smartcity-fee-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.smartcity-fee-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
+.smartcity-fee-tab:hover {
+  color: #667eea;
+  background: #f7fafc;
+}
+
+.smartcity-fee-tab.active {
+  color: #667eea;
+}
+
+.smartcity-fee-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px 3px 0 0;
+}
+
+.smartcity-fee-tab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+/* Recycle Bin Tab */
+.recycle-bin-tab {
+  color: #e53e3e !important;
+}
+
+.recycle-bin-tab.active {
+  color: #e53e3e !important;
+}
+
+.recycle-bin-tab.active::after {
+  background: #e53e3e !important;
+}
+
+/* Form Section */
+.smartcity-fee-form-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.smartcity-fee-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.smartcity-fee-form-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.smartcity-fee-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.smartcity-fee-sample-btn,
+.smartcity-fee-clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.smartcity-fee-sample-btn {
+  background: #f0f5ff;
+  color: #667eea;
+}
+
+.smartcity-fee-sample-btn:hover {
+  background: #e6edff;
+  transform: translateY(-2px);
+}
+
+.smartcity-fee-clear-btn {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.smartcity-fee-clear-btn:hover {
+  background: #fee;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+/* Form Grid */
+.smartcity-fee-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.smartcity-fee-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.smartcity-fee-form-group.full-width {
+  grid-column: span 2;
+}
+
+.smartcity-fee-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.label-icon {
+  font-size: 1.1rem;
+}
+
+.smartcity-fee-input,
+.smartcity-fee-select,
+.smartcity-fee-textarea {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.smartcity-fee-input:hover,
+.smartcity-fee-select:hover,
+.smartcity-fee-textarea:hover {
+  border-color: #cbd5e0;
+}
+
+.smartcity-fee-input:focus,
+.smartcity-fee-select:focus,
+.smartcity-fee-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.smartcity-fee-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Error styles */
+.smartcity-fee-input.error {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.error-text {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.field-hint {
+  color: #718096;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* Form Footer */
+.smartcity-fee-form-footer {
+  text-align: center;
+}
+
+.smartcity-fee-generate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.smartcity-fee-generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.smartcity-fee-generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Preview Section */
+.smartcity-fee-preview-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.smartcity-fee-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.smartcity-fee-preview-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.smartcity-fee-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.smartcity-fee-edit-btn:hover {
+  background: #edf2f7;
+  transform: translateX(-2px);
+}
+
+/* Recipient Info */
+.smartcity-fee-recipient-info {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.smartcity-fee-recipient-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+}
+
+.recipient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.recipient-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recipient-label {
+  font-weight: 600;
+  color: #718096;
+  min-width: 50px;
+}
+
+.recipient-value {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.recipient-value.amount {
+  color: #48bb78;
+  font-weight: 700;
+}
+
+.recipient-value.date {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+/* Email Preview */
+.smartcity-fee-email-preview {
+  background: #f8fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.email-header {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.email-subject,
+.email-from {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.subject-label,
+.from-label {
+  font-weight: 600;
+  color: #718096;
+  min-width: 60px;
+}
+
+.subject-value,
+.from-value {
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.email-body {
+  padding: 1.5rem;
+}
+
+.email-content {
+  font-family: 'Inter', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Send Options */
+.smartcity-fee-send-options {
+  margin-top: 2rem;
+}
+
+.smartcity-fee-send-options h3 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+}
+
+.send-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.smartcity-fee-send-email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.smartcity-fee-send-email-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.smartcity-fee-send-email-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Message */
+.smartcity-fee-success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 10px;
+  color: #2f855a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  font-size: 1.2rem;
+}
+
+/* History Section */
+.smartcity-fee-history-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.smartcity-fee-history-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  color: #2d3748;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.history-item:hover {
+  transform: translateX(5px);
+  background: #edf2f7;
+}
+
+.history-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.history-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.history-details h4 {
+  font-size: 1rem;
+  margin: 0 0 0.2rem 0;
+  color: #2d3748;
+}
+
+.history-details p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0 0 0.2rem 0;
+}
+
+.history-time {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.history-status {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.success {
+  background: #f0fff4;
+  color: #2f855a;
+}
+
+.status-badge.pending {
+  background: #feebc8;
+  color: #dd6b20;
+}
+
+.history-delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.history-delete-btn:hover {
+  opacity: 1;
+  background: #fee;
+  transform: scale(1.1);
+}
+
+/* Recycle Bin */
+.smartcity-fee-recycle-bin {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.recycle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.recycle-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.recycle-header p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.recycle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recycle-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #e53e3e;
+  flex-wrap: wrap;
+}
+
+.recycle-item:hover {
+  transform: translateX(5px);
+  background: #edf2f7;
+}
+
+.recycle-icon {
+  font-size: 2rem;
+  min-width: 48px;
+  text-align: center;
+}
+
+.recycle-details {
+  flex: 1;
+  min-width: 250px;
+}
+
+.recycle-details h4 {
+  font-size: 1rem;
+  margin: 0 0 0.2rem 0;
+  color: #2d3748;
+}
+
+.recycle-details p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0 0 0.2rem 0;
+}
+
+.recycle-time,
+.recycle-expiry {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.recycle-expiry {
+  color: #e53e3e;
+}
+
+.recycle-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.recycle-restore-btn,
+.recycle-delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.recycle-restore-btn {
+  background: #f0f5ff;
+  color: #667eea;
+}
+
+.recycle-restore-btn:hover {
+  background: #e6edff;
+  transform: translateY(-2px);
+}
+
+.recycle-delete-btn {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.recycle-delete-btn:hover {
+  background: #fee;
+  transform: translateY(-2px);
+}
+
+.no-items,
+.no-history {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Stats Section */
+.smartcity-fee-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  background: #f7fafc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* Loading Spinner */
+.smartcity-fee-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smartcity-fee-container {
+    padding: 0 1rem;
+  }
+
+  .smartcity-fee-title {
+    font-size: 2rem;
+  }
+
+  .smartcity-fee-tabs {
+    flex-direction: column;
+  }
+
+  .smartcity-fee-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .smartcity-fee-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smartcity-fee-form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .send-buttons {
+    flex-direction: column;
+  }
+
+  .smartcity-fee-send-email-btn {
+    width: 100%;
+  }
+
+  .recipient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-item,
+  .recycle-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .history-status,
+  .recycle-actions {
+    justify-content: center;
+  }
+
+  .recycle-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartcity-fee-header {
+    padding: 1.5rem;
+  }
+
+  .smartcity-fee-title {
+    font-size: 1.5rem;
+  }
+
+  .smartcity-fee-icon {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+
+  .smartcity-fee-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .smartcity-fee-sample-btn,
+  .smartcity-fee-clear-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recycle-actions {
+    width: 100%;
+  }
+
+  .recycle-restore-btn,
+  .recycle-delete-btn {
+    flex: 1;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .smartcity-fee-form-section,
+  .smartcity-fee-preview-section,
+  .smartcity-fee-history-section,
+  .smartcity-fee-recycle-bin,
+  .stat-card {
+    background: #2d3748;
+  }
+
+  .smartcity-fee-form-header h2,
+  .smartcity-fee-preview-header h2,
+  .smartcity-fee-history-section h2,
+  .recycle-header h2,
+  .stat-value {
+    color: #f7fafc;
+  }
+
+  .smartcity-fee-label {
+    color: #cbd5e0;
+  }
+
+  .smartcity-fee-input,
+  .smartcity-fee-select,
+  .smartcity-fee-textarea {
+    background: #1a202c;
+    border-color: #4a5568;
+    color: #f7fafc;
+  }
+
+  .smartcity-fee-input::placeholder,
+  .smartcity-fee-select::placeholder,
+  .smartcity-fee-textarea::placeholder {
+    color: #718096;
+  }
+
+  .smartcity-fee-recipient-info,
+  .email-header,
+  .email-body,
+  .history-item,
+  .recycle-item {
+    background: #1a202c;
+  }
+
+  .recipient-label,
+  .subject-label,
+  .from-label {
+    color: #a0aec0;
+  }
+
+  .recipient-value,
+  .subject-value,
+  .from-value,
+  .email-content,
+  .history-details h4,
+  .recycle-details h4 {
+    color: #e2e8f0;
+  }
+
+  .history-details p,
+  .recycle-details p {
+    color: #a0aec0;
+  }
+
+  .stat-icon {
+    background: #1a202c;
+  }
+
+  .smartcity-fee-tabs {
+    border-bottom-color: #4a5568;
+  }
+
+  .smartcity-fee-tab {
+    color: #a0aec0;
+  }
+
+  .smartcity-fee-tab:hover {
+    background: #2d3748;
+  }
+
+  .field-hint {
+    color: #a0aec0;
+  }
+
+  .recycle-time {
+    color: #a0aec0;
+  }
+
+  .no-items,
+  .no-history {
+    color: #a0aec0;
+  }
+}
+/* Email History */
+.email-history {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.email-history h4 {
+  color: #2d3748;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.history-list-small {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.history-time {
+  color: #718096;
+  min-width: 80px;
+}
+
+.history-email {
+  color: #2d3748;
+  flex: 1;
+  word-break: break-all;
+}
+
+.history-status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.history-status.success {
+  background: #f0fff4;
+  color: #2f855a;
+}
+
+/* Send Note */
+.send-note {
+  margin-top: 10px;
+  color: #718096;
+  font-size: 13px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .email-history {
+    background: #1a202c;
+    border-color: #4a5568;
+  }
+  
+  .history-entry {
+    background: #2d3748;
+  }
+  
+  .history-time {
+    color: #a0aec0;
+  }
+  
+  .history-email {
+    color: #e2e8f0;
+  }
+  
+  .send-note {
+    color: #a0aec0;
+  }
+}

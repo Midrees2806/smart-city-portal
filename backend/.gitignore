@@ -1,0 +1,16 @@
+# Security
+.env
+
+# Python environment/cache
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Database (optional - ignore if you want everyone to start with a fresh DB)
+# smartcity.db
+
+# OS generated files
+.DS_Store
+Thumbs.db

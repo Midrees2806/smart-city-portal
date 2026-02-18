@@ -1,0 +1,612 @@
+/* Smart City Portal - Professional Login Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.smartcity-login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', sans-serif;
+}
+
+.smartcity-login-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Styles */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 12px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.brand-logo h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.brand-tagline {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Form Styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.label-icon {
+  font-size: 1.1rem;
+}
+
+.form-group input {
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  width: 100%;
+}
+
+.form-group input:hover {
+  border-color: #cbd5e0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input.error {
+  border-color: #fc8181;
+  background: #fff5f5;
+}
+
+/* Password Input with Toggle */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #a0aec0;
+  transition: color 0.3s ease;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: #667eea;
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+/* Field Validation */
+.field-error {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.field-error::before {
+  content: '⚠️';
+  font-size: 0.9rem;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  text-align: right;
+  margin-top: -0.5rem;
+}
+
+.forgot-password-link a {
+  color: #718096;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.forgot-password-link a:hover {
+  color: #667eea;
+  transform: translateX(-3px);
+}
+
+.link-icon {
+  font-size: 1rem;
+}
+
+/* Login Button */
+.smartcity-login-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.smartcity-login-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.smartcity-login-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.smartcity-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.smartcity-login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.smartcity-login-btn:disabled::before {
+  display: none;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+/* Register Link */
+.smartcity-register-link {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  color: #718096;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.link-text {
+  color: #718096;
+}
+
+.smartcity-register-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+}
+
+.smartcity-register-link a:hover {
+  background: #edf2f7;
+  transform: translateX(5px);
+}
+
+/* Login Features */
+.login-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+.feature-divider {
+  color: #cbd5e0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Messages */
+.smartcity-login-error,
+.smartcity-login-success {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.smartcity-login-error {
+  background: #fff5f5;
+  border: 1px solid #fc8181;
+  color: #c53030;
+}
+
+.smartcity-login-success {
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  color: #2f855a;
+}
+
+.error-icon,
+.success-icon {
+  font-size: 1.2rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smartcity-login-box {
+    padding: 1.5rem;
+  }
+
+  .brand-logo {
+    flex-direction: column;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .brand-logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-features {
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 20px;
+  }
+
+  .feature-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartcity-login-box {
+    padding: 1.2rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.85rem;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .password-toggle {
+    right: 12px;
+    font-size: 1.2rem;
+  }
+
+  .smartcity-register-link {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .smartcity-register-link a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .smartcity-login-box {
+    background: rgba(26, 32, 44, 0.95);
+  }
+
+  .brand-logo h2 {
+    background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-tagline {
+    color: #a0aec0;
+  }
+
+  .form-group label {
+    color: #cbd5e0;
+  }
+
+  .form-group input {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #f7fafc;
+  }
+
+  .form-group input::placeholder {
+    color: #718096;
+  }
+
+  .forgot-password-link a {
+    color: #a0aec0;
+  }
+
+  .login-features {
+    background: #2d3748;
+  }
+
+  .feature-item {
+    color: #cbd5e0;
+  }
+
+  .smartcity-register-link {
+    border-top-color: #4a5568;
+    color: #a0aec0;
+  }
+
+  .smartcity-register-link a {
+    background: #2d3748;
+    color: #cbd5e0;
+  }
+
+  .smartcity-register-link a:hover {
+    background: #4a5568;
+  }
+}
+
+/* Accessibility - Focus Visible */
+.form-group input:focus-visible,
+.password-toggle:focus-visible,
+.smartcity-login-btn:focus-visible,
+.forgot-password-link a:focus-visible,
+.smartcity-register-link a:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .smartcity-login-box,
+  .smartcity-login-btn::before,
+  .smartcity-login-error,
+  .smartcity-login-success,
+  .field-error,
+  .spinner {
+    animation: none;
+    transition: none;
+  }
+}
+/* Category Selection Tabs */
+.login-category-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: 1px solid #e2e8f0;
+}
+
+.category-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+  background: #ffffff;
+  color: #334155;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.category-tab .tab-icon {
+  font-size: 1.2rem;
+}
+
+.category-tab .tab-label {
+  font-size: 0.9rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .login-category-tabs {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .category-tab {
+    color: #a0aec0;
+  }
+
+  .category-tab:hover {
+    background: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .category-tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-category-tabs {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .category-tab {
+    width: 100%;
+  }
+}
